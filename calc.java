@@ -1,6 +1,0 @@
-/**
- * calc
- */
-public class calc {
-
-}
