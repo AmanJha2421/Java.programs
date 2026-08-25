@@ -279,7 +279,7 @@ class practice
             // }
 
            
-            int []arr = {5,6,7,10,9};
+            // int []arr = {5,6,7,10,9};
             // int n = Math.floorDiv(arr.length,2);
             // for(int i=0;i<n;i++){
             //     int temp = arr[i];
@@ -316,7 +316,6 @@ class practice
             //     }
             // }
             // System.out.print(sort);
-
     }
 }
 
