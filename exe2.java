@@ -6,7 +6,7 @@ class exe2
     {
         Scanner sc = new Scanner(System.in);
         Random rnd = new Random();
-        System.out.println("INSTRUCTIONS : \n 1 = rock\n 2 = paper\n 3 = scissors\n Type \"YES\" to play");
+        System.out.println("INSTRUCTIONS : \n 1 = rock\n 2 = paper\n 3 = scissors\n 4 = To end the match\n Type \"YES\" to play");
         String s = sc.next();
         int c = 0;
         do{
@@ -43,11 +43,16 @@ class exe2
         System.out.println("Com won");
         System.out.println("You choose : Paper\nCom choose : Scissors ");
         }
+        else if(b==4){
+            System.out.println("Match ended");
+            break;
+
+        }
         else 
         {
             System.out.println("Tied");
         }
-        c++;
-        }while(c<=2);
+        
+        }while(c!=4);
     }
 }
