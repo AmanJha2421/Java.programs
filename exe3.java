@@ -7,7 +7,7 @@ class game{
     int userInput;
     int guesses = 0; 
     public  game(){
-         n = rnd.nextInt(1,101);
+         n = rnd.nextInt(1,1001);
     }
      public int takeUserInput(){
         System.out.println("Choose a number : ");
@@ -26,7 +26,7 @@ class game{
             System.out.println("Lower");
         }
         else {
-            System.out.println("Please enter a number between 1-100!");
+            System.out.println("Please enter a number between 1-1000!");
         }
     }      
     public void setNoOfGuesses(int i){
@@ -41,7 +41,7 @@ public class exe3 {
     public static void main(String[] args) {
         // game number = new game();
         game number = new game();
-        System.out.println("The number you have to guess is between 1-100");
+        System.out.println("The number you have to guess is between 1-1000");
 
         for(int i=1;number.n!=number.userInput;i++){
             number.takeUserInput();
