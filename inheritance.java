@@ -18,6 +18,10 @@ class executing extends testing{
     public int getB(){
         return b;
     }
+    public int calc(){
+        int c = a*a;
+        return c;
+    }
 
 }
 
@@ -36,6 +40,7 @@ public class inheritance {
         System.out.println(program1.getA());
         program1.setB(10);
         System.out.println(program1.getB());
+        System.out.println(program1.calc());
         
         
 
