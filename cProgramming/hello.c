@@ -12,7 +12,12 @@ int main(){
     // float pi = 3.14;
     // float power = pow(r,2.0);
     // printf("Area : %.2f",pi*power);
-    int c = (int) 1.222222222;
-    printf("%d\n",c);
+    // int c = (int) 1.222222222;
+    // printf("%d\n",c);
+    int a=15, b, c;
+    if(a>=20)
+        b=30;
+    c=20;
+    printf("\n %d\n %d", b, c);
     return 0;
 }
