@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-i = 48;
+// i = 48;
 int main(){
     // printf("Enter side : ");
     // int a;
@@ -19,6 +19,12 @@ int main(){
     //     b=30;
     // c=20;
     // printf("\n %d\n %d", b, c);
-    printf("%d",i);
+    // printf("%d",i);
+ 
+int a=15,b,c;
+if(a>=20)
+b=30;
+c=20;
+printf("\n %d %d", b, c);
     return 0;
 }
