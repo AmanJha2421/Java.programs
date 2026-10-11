@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 interface kitchen{
     default void aboutK(){
         System.out.println("\n\nKITCHEN ITEMS\n\n");
@@ -61,10 +63,67 @@ class home implements kitchen,washroom,bedroom{
     }
 }
 
+// INHERITENCE IN INTERFACES
 
+interface set1{
+    void ques1();
+    void ques2();
+}
+interface set2 extends set1{
+    void ques3();
+    void ques4();
+}
+class exam implements set2{
+    Scanner sc = new Scanner(System.in);
+    public void ques1(){
+        System.out.println("1. what is 9+15?");
+        int ans1 = sc.nextInt();
+        if(ans1 == 24){
+            System.out.println("Correct");
+        }
+        else{
+            System.out.println("Incorrect");
+        }
+        System.out.println("Ques 1 is Solved");
+    }
+    public void ques2(){
+        System.out.println("2. what is 10+12?");
+        int ans2 = sc.nextInt();
+        if(ans2 == 22){
+            System.out.println("Correct");
+        }
+        else{
+            System.out.println("Incorrect");
+        }
+        System.out.println("Ques 2 is Solved");
+    }
+    public void ques3(){
+         System.out.println("3. what is 13-2?");
+        int ans3 = sc.nextInt();
+        if(ans3 == 11){
+            System.out.println("Correct");
+        }
+        else{
+            System.out.println("Incorrect");
+        }
+        System.out.println("Ques 3 is Solved");
+    }
+    public void ques4(){
+         System.out.println("4. what is 4*7?");
+        int ans4 = sc.nextInt();
+        if(ans4 == 28){
+            System.out.println("Correct");
+        }
+        else{
+            System.out.println("Incorrect");
+        }
+        System.out.println("Ques 4 is Solved");
+    }
+}
 
 public class defaultMethods {
     public static void main(String[] args) {
+        
         home myhome = new home();
         myhome.aboutW();
         String[] p = myhome.Products();
@@ -85,6 +144,12 @@ public class defaultMethods {
         myhome.fridge();
         myhome.oven();
         myhome.stoveAndGas();
+
+        exam CO = new exam();
+        CO.ques1();
+        CO.ques2();
+        CO.ques3();
+        CO.ques4();
         
         
     }
