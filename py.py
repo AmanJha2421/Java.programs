@@ -52,7 +52,7 @@ for scale in range(11, 17):
 
         t.goto(x, y)
         t.write(
-            "I LOVE YOU",
+            "AMAN",
             align="center",
             font=("Arial", 8, "bold")
         )
