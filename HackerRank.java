@@ -23,19 +23,19 @@ public class HackerRank {
 static String getSmallestAndLargest(String st,int n){
     int temp = st.charAt(0);
     int index = 0;
-    for(int i=1;i<st.length()-n+1;i++){
+    for(int i=0;i<st.length()-n+1;i++){
         if(st.charAt(i)<temp){
             temp = st.charAt(i);
             index = i;
         }
         else if(st.charAt(i)==temp){
-            for(int j=0;j<n-1;j++){ 
-                if(st.charAt(j+i+1)<st.charAt(index+j+1)){
-                    // temp = st.charAt(i);
+            for(int j=i;j<n+i-1;j++){ 
+                if(st.charAt(j+1)<st.charAt(index+j-i+1)){
+                    temp = st.charAt(i);
                     index = i;
                     break;
                 }
-                else if (st.charAt(i + j + 1) > st.charAt(index + j + 1)) {
+                else if (st.charAt( j + 1) > st.charAt(index + j-i + 1)) {
                         break;
                     }
             }
@@ -44,19 +44,19 @@ static String getSmallestAndLargest(String st,int n){
     // return st.substring(index,index+n);
     int temp1 = st.charAt(0);
     int index1 = 0;
-    for(int i=1;i<st.length()-n+1;i++){
+    for(int i=0;i<st.length()-n+1;i++){
         if(st.charAt(i)>temp1){
             temp1 = st.charAt(i);
             index1 = i;
         }
         else if(st.charAt(i)==temp1){
-            for(int j=0;j<n-1;j++){ 
-                if(st.charAt(j+i+1)>st.charAt(index1+j+1)){
-                    // temp1 = st.charAt(i);
+            for(int j=i;j<i+n-1;j++){ 
+                if(st.charAt(j+1)>st.charAt(index1-i+j+1)){
+                    temp1 = st.charAt(i);
                     index1 = i;
                     break;
                 }
-                else if (st.charAt(i + j + 1) < st.charAt(index1 + j + 1)) {
+                else if (st.charAt( j + 1) < st.charAt(index1-i + j + 1)) {
                         break;
                     }
             }
