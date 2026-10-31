@@ -2,6 +2,7 @@
 
 void swap(int *a, int *b);
 int max(int *a,int *b);
+int fibonacci(int n);
 
 int main(){
     // int age = 19;
@@ -35,14 +36,39 @@ int main(){
     // for(int i=0;i<n;i++){
     //     printf("%d ",arr[i]);
     // }
-    char letters[26];
-    char *ptr = letters;
-    for(int i=0;i<26;i++){
-        *(ptr+i) = 'A' + i; 
+    // char letters[26];
+    // char *ptr = letters;
+    // for(int i=0;i<26;i++){
+    //     *(ptr+i) = 'A' + i; 
+    // }
+    // for(int i=0;i<26;i++){
+    //     printf("%c ",*(ptr+i));
+    //     if(i==25){
+    //         printf("\n");
+    //     }
+    // }
+    // for(int i=0;i<13;i++){
+        
+    //     char *ptr = &letters[i];
+    //     char temp = *ptr;
+    //     char *ptr2 = &letters[25-i];
+    //     *ptr = *ptr2;
+    //     *ptr2 = temp;
+    //     ptr++;
+    // }
+    // for(int i=0;i<26;i++){
+    //     printf("%c ",*(ptr+i));
+    // }
+    int n;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=1;i<=n;i++){
+        arr[i-1]=fibonacci(i);
     }
-    for(int i=0;i<26;i++){
-        printf("%c ",*(ptr+i));
+    for(int i=0;i<n;i++){
+        printf(" %d",arr[i]);
     }
+
     return 0;
 }
 
@@ -57,5 +83,17 @@ int max(int *a,int *b){
     }
     else{
         return *b;
+    }
+}
+int fibonacci(int n){
+    if(n==1){
+        return 0;
+    }
+    else if(n==2){
+        return 1;
+    }
+    else{
+    int y = fibonacci(n-1)+fibonacci(n-2);
+    return y;
     }
 }
