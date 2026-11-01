@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 void slice(char arr[] ,int n, int m);
+void trim(char arr[]);
 
 int main(){
 
@@ -37,9 +38,12 @@ int main(){
         // }
         // printf("%c comes %d times in the list %s",n,count,num);
 
-        char array[100];
-        scanf("%s",&array);
-        slice(array,3,6);
+        // char array[100];
+        // scanf("%s",&array);
+        // slice(array,3,6);
+        char arr[100];
+        fgets(arr,100,stdin);
+        trim(arr);
         
     return 0;
 }
@@ -50,5 +54,17 @@ void slice(char arr[], int n, int m){
         arr1[i-n] = arr[i];
     }
     arr1[m-n] = '\0';
+    puts(arr1);
+}
+void trim(char arr[]){
+    int j = 0;
+    char arr1[100];
+    for(int i=0;arr[i]!='\0';i++){
+        if(arr[i]!=' '){
+            arr1[j] = arr[i];
+            j++;
+        }
+    }
+    arr1[j]='\0';
     puts(arr1);
 }
